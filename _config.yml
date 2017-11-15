@@ -4,7 +4,7 @@ highlighter:      rouge
 
 # Setup
 title:            Mechasparrow
-tagline:          'A Jekyll theme'
+tagline:          'The Mechanical Sparrow Blog'
 description:      'The blog/website for the Mechanical Sparrow, Michael Navazhylau'
 url:              https://mechasparrow.github.io/
 baseurl:          # the optional subpath of your site, e.g. "/blog"
@@ -14,7 +14,7 @@ baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
+  name:           'Michael Navazhylau'
   url:            https://twitter.com/fongandrewc
 
 paginate:         5
@@ -34,6 +34,8 @@ sidebar_home_link:  true
                                 # set this to the root of the paginate_path
                                 # to enable a separate blog link.
 github:
-  repo:             https://github.com/fongandrew/hydeout
-
-gems: [jekyll-paginate, jekyll-gist]
+  repo:             https://github.com/Mechasparrow/mechasparrow.github.io.git
+  link:             https://github.com/Mechasparrow
+gems: [jekyll-paginate, jekyll-gist, jekyll-feed]
+disqus:
+  shortname: mechasparrow-1

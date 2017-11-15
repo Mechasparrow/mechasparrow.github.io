@@ -4,10 +4,6 @@ title: About
 sidebar_link: true
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it
-  for your own use upon downloading. Carry on!
-</p>
+I am software engineer in St.Louis that specializes in Full stack web development. This includes Elixir, PHP, HTML, CSS, JavaScript, React, Angular, Ionic, and NodeJS. I am also familar with Rails, Django, Phoenix, and Laravel.
 
-To make pages show up in the sidebar, add `sidebar_link: true` to the front
-matter.
+I also develop video games and live stream from time to time :)
