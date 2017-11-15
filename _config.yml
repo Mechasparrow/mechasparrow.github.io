@@ -3,7 +3,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Robobird
+title:            Mechasparrow
 tagline:          'A Jekyll theme'
 description:      'The blog/website for the Mechanical Sparrow, Michael Navazhylau'
 url:              https://mechasparrow.github.io/
@@ -35,3 +35,5 @@ sidebar_home_link:  true
                                 # to enable a separate blog link.
 github:
   repo:             https://github.com/fongandrew/hydeout
+
+gems: [jekyll-paginate, jekyll-gist]
