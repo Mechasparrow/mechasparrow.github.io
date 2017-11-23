@@ -37,3 +37,10 @@ github:
 gems: [jekyll-paginate, jekyll-gist, jekyll-feed]
 disqus:
   shortname: mechasparrow-1
+
+defaults:
+  - scope:
+      path: "archive"
+    values:
+      archive: true
+      layout: "post"

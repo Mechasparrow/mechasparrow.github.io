@@ -1,0 +1,73 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>How to Desktop Application with Electron and React</title><meta name="description" content="Lets learn how to build a Electron application with React"><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">How to Desktop Application with Electron and React</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Lets learn how to build a Electron application with React
+</section>
+<section data-field="body" class="e-content">
+<section name="c1e0" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="63d6" id="63d6" class="graf graf--h3 graf--leading graf--title">How to build a Desktop Application with Electron and React</h3><figure name="03d6" id="03d6" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 512px; max-height: 256px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 50%;"></div><img class="graf-image" data-image-id="1*rI2NNwTLfX_TH3b7OE93JQ.png" data-width="512" data-height="256" src="https://cdn-images-1.medium.com/max/800/1*rI2NNwTLfX_TH3b7OE93JQ.png"></div><figcaption class="imageCaption">Electron and React… Why not?</figcaption></figure><p name="5e0e" id="5e0e" class="graf graf--p graf-after--figure">Hey, everyone. It’s Mechasparrow again. I’ve been working with <a href="https://electron.atom.io/" data-href="https://electron.atom.io/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Electron</a> alongside other front-end technologies such as <a href="https://facebook.github.io/react/" data-href="https://facebook.github.io/react/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">React</a>. I had some trouble setting the projects up.</p><p name="16a0" id="16a0" class="graf graf--p graf-after--p">I decided that I should write a tutorial to help others who might be trying the same thing.</p><p name="be81" id="be81" class="graf graf--p graf-after--p">You can view the full source code for the tutorial at <a href="https://github.com/Mechasparrow/electron-react-tutorial" data-href="https://github.com/Mechasparrow/electron-react-tutorial" class="markup--anchor markup--p-anchor" rel="nofollow noopener noopener" target="_blank">https://github.com/Mechasparrow/electron-react-tutorial</a></p><p name="5938" id="5938" class="graf graf--p graf-after--p graf--trailing">Alright, let’s start!</p></div></div></section><section name="0ba3" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="ef4f" id="ef4f" class="graf graf--h3 graf--leading">Setting up React</h3><p name="820a" id="820a" class="graf graf--p graf-after--h3">We are going to install and setup a simple react project first. Here are the commands.</p><pre name="2a77" id="2a77" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">npm install -g create-react-app<br>create-react-app your-app<br>cd your-app</code></pre><h3 name="e1f6" id="e1f6" class="graf graf--h3 graf-after--pre">Adding Electron Code</h3><p name="5843" id="5843" class="graf graf--p graf-after--h3">We only need one file to make this Electron compatible. This will be called main.js. We will add it to the root of the project directory.</p><pre name="5a15" id="5a15" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">// ./main.js<br>const {app, BrowserWindow} = require(&#39;electron&#39;)<br><br>let win = null;<br><br>function createWindow() {<br>  // Initialize the window to our specified dimensions<br>  win = new BrowserWindow({width: 1000, height: 600});<br><br>  // Specify entry point<br>  win.loadURL(&#39;http://localhost:3000&#39;);<br><br>  // Show dev tools<br>  // Remove this line before distributing<br>  win.webContents.openDevTools()<br><br>  // Remove window once app is closed<br>  win.on(&#39;closed&#39;, function () {<br>    win = null;<br>  });<br>}<br><br><br>app.on(&#39;ready&#39;, function () {<br><br>  createWindow();<br><br>});<br><br>app.on(&#39;activate&#39;, () =&gt; {<br>  if (win === null) {<br>    createWindow()<br>  }<br>})<br><br>app.on(&#39;window-all-closed&#39;, function () {<br>  if (process.platform != &#39;darwin&#39;) {<br>    app.quit();<br>  }<br>});</code></pre><p name="8f76" id="8f76" class="graf graf--p graf-after--pre">We have it load the URL at <a href="http://localhost:3000" data-href="http://localhost:3000" class="markup--anchor markup--p-anchor" target="_blank">http://localhost:3000</a> because that is where the react server will be running.</p><h3 name="fcf3" id="fcf3" class="graf graf--h3 graf-after--p">Modifying the package.json</h3><p name="e426" id="e426" class="graf graf--p graf-after--h3">In order for electron to properly find the app the package.json needs to be modified. Make sure to add this to the package.json.</p><pre name="6eda" id="6eda" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">{<br>  ...<br>  &quot;main&quot;: &quot;main.js&quot;,<br>  ...<br>}</code></pre><h3 name="d9b8" id="d9b8" class="graf graf--h3 graf-after--pre">Install Electron</h3><p name="0814" id="0814" class="graf graf--p graf-after--h3">We can install electron globally by running this command through npm</p><pre name="422f" id="422f" class="graf graf--pre graf-after--p">npm install -g electron</pre><p name="f28c" id="f28c" class="graf graf--p graf-after--pre">After that we are ready to run the project!</p><h3 name="ea5c" id="ea5c" class="graf graf--h3 graf-after--p">Launching the Project</h3><p name="59e5" id="59e5" class="graf graf--p graf-after--h3">In order for us to run the project, we will need to do two things. The first is launching the react server. The second is launching electron.</p><p name="c48f" id="c48f" class="graf graf--p graf-after--p">First,we run</p><pre name="404b" id="404b" class="graf graf--pre graf-after--p">npm start</pre><p name="3f81" id="3f81" class="graf graf--p graf-after--pre">to start the react server.</p><p name="b653" id="b653" class="graf graf--p graf-after--p">In a separate window, we launch electron by running.</p><pre name="750f" id="750f" class="graf graf--pre graf-after--p">electron .</pre><p name="0a33" id="0a33" class="graf graf--p graf-after--pre">That should do it! I hope you enjoy your desktop application development with <a href="https://electron.atom.io/" data-href="https://electron.atom.io/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Electron</a> and <a href="https://facebook.github.io/react/" data-href="https://facebook.github.io/react/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">React</a> :)</p><p name="4707" id="4707" class="graf graf--p graf-after--p graf--trailing">P.S Here is the Angular version <a href="https://codeburst.io/how-to-build-a-desktop-application-with-electron-and-angular-ede2a1bd70cb" data-href="https://codeburst.io/how-to-build-a-desktop-application-with-electron-and-angular-ede2a1bd70cb" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">https://codeburst.io/how-to-build-a-desktop-application-with-electron-and-angular-ede2a1bd70cb</a></p></div></div></section><section name="4bb0" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="5700" id="5700" class="graf graf--p graf--leading graf--trailing">I hoped you enjoyed this developer tutorial. If you did, please be sure to recommend, follow, and share this article.</p></div></div></section><section name="a09c" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="62f9" id="62f9" class="graf graf--p graf--leading graf--trailing"><a href="https://medium.com/u/e053a37a8888" data-href="https://medium.com/u/e053a37a8888" data-anchor-type="2" data-user-id="e053a37a8888" data-action-value="e053a37a8888" data-action="show-user-card" data-action-type="hover" class="markup--user markup--p-user" target="_blank">Michael Navazhylau</a> is a Software Engineer in St.Louis who loves building cool and useful software. He is also the cofounder of <a href="https://medium.com/hammercircuit" data-href="https://medium.com/hammercircuit" class="markup--anchor markup--p-anchor" target="_blank">Hammercircuit</a>. You can check out his website at <a href="https://mechasparrow.github.io" data-href="https://mechasparrow.github.io" class="markup--anchor markup--p-anchor" rel="nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener noopener" target="_blank">Mechasparrow</a>.</p></div></div></section>
+</section>
+<footer><p class="p-tags">Tagged in <a href="https://medium.com/tag/javascript" class="p-tag">JavaScript</a>, <a href="https://medium.com/tag/web-development" class="p-tag">Web Development</a>, <a href="https://medium.com/tag/react" class="p-tag">React</a>, <a href="https://medium.com/tag/tech" class="p-tag">Tech</a></p><p>By <a href="https://medium.com/@mechasparrow" class="p-author h-card">Michael Navazhylau</a> on <a href="https://medium.com/p/b606aa3cb529"><time class="dt-published" datetime="2017-07-04T01:54:24.859Z">July 4, 2017</time></a>.</p><p><a href="https://medium.com/@mechasparrow/how-to-desktop-application-with-electron-and-react-b606aa3cb529" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on November 23, 2017.</p></footer></article>
+
+</body></html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Dev log #15 — StartupGen</title><meta name="description" content="Hey, everyone. It’s another dev log. Today, I’m going to talk about StartupGen. It’s a side project that I created that got onto the front…"><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Dev log #15 — StartupGen</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Hey, everyone. It’s another dev log. Today, I’m going to talk about StartupGen. It’s a side project that I created that got onto the front…
+</section>
+<section data-field="body" class="e-content">
+<section name="9fb1" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="caf0" id="caf0" class="graf graf--h3 graf--leading graf--title">Dev log #15 — StartupGen</h3><figure name="c1ae" id="c1ae" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 467px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 66.7%;"></div><img class="graf-image" data-image-id="1*uq2QBEWirqe596pVqLQgKg.jpeg" data-width="5309" data-height="3539" src="https://cdn-images-1.medium.com/max/800/1*uq2QBEWirqe596pVqLQgKg.jpeg"></div><figcaption class="imageCaption">Nice aesthetics Credit: Unsplash</figcaption></figure><p name="8b65" id="8b65" class="graf graf--p graf-after--figure">Hey, everyone. It’s another dev log. Today, I’m going to talk about <a href="http://startup-gen.surge.sh/" data-href="http://startup-gen.surge.sh/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">StartupGen</strong></a>. It’s a side project that I created that got onto the front page of Product Hunt a couple of days back.</p><p name="3a48" id="3a48" class="graf graf--p graf-after--p graf--trailing">I’ll go into more detail about the creation of that and then I will talk about development for the next week.</p></div></div></section><section name="2bed" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="13ef" id="13ef" class="graf graf--h3 graf--leading">How did StartupGen start?</h3><p name="868d" id="868d" class="graf graf--p graf-after--h3">The idea of <a href="http://startup-gen.surge.sh/" data-href="http://startup-gen.surge.sh/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">StartupGen</a> occurred when I was reading a post by <a href="https://medium.com/u/a954430f5d9b" data-href="https://medium.com/u/a954430f5d9b" data-anchor-type="2" data-user-id="a954430f5d9b" data-action-value="a954430f5d9b" data-action="show-user-card" data-action-type="hover" class="markup--user markup--p-user" target="_blank">Eric Stromberg</a>. It was called the <a href="https://themission.co/the-startup-idea-matrix-182bf2e6a53a" data-href="https://themission.co/the-startup-idea-matrix-182bf2e6a53a" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Startup Idea Matrix</a>.</p><p name="4ee0" id="4ee0" class="graf graf--p graf-after--p">After reading the article, I took a look at the Spreadsheet and realized that you could make a generator out of it.</p><h3 name="3a80" id="3a80" class="graf graf--h3 graf-after--p">How did I make it</h3><p name="9566" id="9566" class="graf graf--p graf-after--h3">I built it by converting the Startup Idea Matrix into a CSV and then into 2 separate JSON files. I then used <a href="https://facebook.github.io/react/" data-href="https://facebook.github.io/react/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">ReactJS</a> to render a template that picked a random item from both of the JSON files.</p><h3 name="829e" id="829e" class="graf graf--h3 graf-after--p">Deployment</h3><p name="1628" id="1628" class="graf graf--p graf-after--h3">I created a simple logo with <a href="https://www.figma.com" data-href="https://www.figma.com" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Figma</a>. I then went over to <a href="https://medium.com/u/b8b4445269d0" data-href="https://medium.com/u/b8b4445269d0" data-anchor-type="2" data-user-id="b8b4445269d0" data-action-value="b8b4445269d0" data-action="show-user-card" data-action-type="hover" class="markup--user markup--p-user" target="_blank">Product Hunt</a> and submitted the link along with the logo and screenshots. I then went to sleep.</p><p name="68f3" id="68f3" class="graf graf--p graf-after--p">The following day, I opened up <a href="https://www.producthunt.com/posts/startup-generator-3" data-href="https://www.producthunt.com/posts/startup-generator-3" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Product Hunt</a> and saw that I was on the front page. I realized again I forgot to install analytics, so I set it up on there.</p><h3 name="27d6" id="27d6" class="graf graf--h3 graf-after--p">What’s next?</h3><p name="f006" id="f006" class="graf graf--p graf-after--h3 graf--trailing">Well, I’ll add a couple new features to <a href="http://startup-gen.surge.sh/" data-href="http://startup-gen.surge.sh/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">StartupGen</strong></a>. This would include new styling and name generation. I will also continue with my <a href="https://www.freecodecamp.com" data-href="https://www.freecodecamp.com" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">FreeCodeCamp</a> curriculum.</p></div></div></section><section name="70af" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="8d65" id="8d65" class="graf graf--p graf--leading graf--trailing">Thanks for reading the dev log. If you liked it, please be sure to follow, recommend, and share.</p></div></div></section><section name="777e" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="9b5d" id="9b5d" class="graf graf--p graf--leading graf--trailing"><a href="https://medium.com/u/e053a37a8888" data-href="https://medium.com/u/e053a37a8888" data-anchor-type="2" data-user-id="e053a37a8888" data-action-value="e053a37a8888" data-action="show-user-card" data-action-type="hover" class="markup--user markup--p-user" target="_blank">Michael Navazhylau</a> is a Software Engineer in St.Louis who loves building cool and useful software. He is also the cofounder of <a href="https://medium.com/hammercircuit" data-href="https://medium.com/hammercircuit" class="markup--anchor markup--p-anchor" target="_blank">Hammercircuit</a>. You can check out his website at <a href="https://mechasparrow.github.io" data-href="https://mechasparrow.github.io" class="markup--anchor markup--p-anchor" rel="nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener nofollow noopener noopener" target="_blank">Mechasparrow</a>.</p></div></div></section><section name="f6bf" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="7a98" id="7a98" class="graf graf--p graf--leading graf--trailing"><em class="markup--em markup--p-em">Again, I would like to give credit to </em><a href="https://medium.com/u/a954430f5d9b" data-href="https://medium.com/u/a954430f5d9b" data-anchor-type="2" data-user-id="a954430f5d9b" data-action-value="a954430f5d9b" data-action="show-user-card" data-action-type="hover" class="markup--user markup--p-user" target="_blank"><em class="markup--em markup--p-em">Eric Stromberg</em></a><em class="markup--em markup--p-em">. Big thanks to him for The Startup Matrix.</em></p></div></div></section>
+</section>
+<footer><p class="p-tags">Tagged in <a href="https://medium.com/tag/product-hunt" class="p-tag">Product Hunt</a>, <a href="https://medium.com/tag/programming" class="p-tag">Programming</a>, <a href="https://medium.com/tag/tech" class="p-tag">Tech</a>, <a href="https://medium.com/tag/blogger" class="p-tag">Blogger</a>, <a href="https://medium.com/tag/software-development" class="p-tag">Software Development</a></p><p>By <a href="https://medium.com/@mechasparrow" class="p-author h-card">Michael Navazhylau</a> on <a href="https://medium.com/p/aa23c47b6cc0"><time class="dt-published" datetime="2017-06-15T19:48:10.477Z">June 15, 2017</time></a>.</p><p><a href="https://medium.com/@mechasparrow/dev-log-15-startupgen-aa23c47b6cc0" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on November 23, 2017.</p></footer></article>
+
+</body></html>
