@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Building Alkonost: Aggregated RSS News Reader"
-date: "2017-11-22 23:07"
+excerpt_separator:  <!--more-->
 ---
 
 Hello.

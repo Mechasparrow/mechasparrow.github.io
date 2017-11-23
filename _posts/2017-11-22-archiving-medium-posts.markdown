@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Archiving Medium Posts"
-date: "2017-11-22 23:18"
+excerpt_separator:  <!--more-->
 ---
 
 I recently stated that I would be moving off Medium and writing mainly on my personal website.
