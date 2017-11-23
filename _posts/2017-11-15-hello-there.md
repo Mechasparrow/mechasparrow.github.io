@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Welcome
+tags: general
 excerpt_separator:  <!--more-->
 ---
 

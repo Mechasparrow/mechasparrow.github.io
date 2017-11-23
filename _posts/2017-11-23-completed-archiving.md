@@ -1,6 +1,8 @@
 ---
 layout: "post"
 title: "Implemented Medium Archiving"
+category: Development
+tags: dev
 excerpt_separator:  <!--more-->
 ---
 

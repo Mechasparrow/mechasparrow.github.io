@@ -1,6 +1,8 @@
 ---
 layout: "post"
 title: "Archiving Medium Posts"
+category: Development
+tags: dev
 excerpt_separator:  <!--more-->
 ---
 

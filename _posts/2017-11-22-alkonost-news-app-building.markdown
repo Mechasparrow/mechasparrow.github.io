@@ -1,6 +1,8 @@
 ---
 layout: "post"
 title: "Building Alkonost: Aggregated RSS News Reader"
+category: Development
+tags: dev
 excerpt_separator:  <!--more-->
 ---
 

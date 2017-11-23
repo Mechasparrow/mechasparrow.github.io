@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Updated Website
+category: Development
+tags: dev
 excerpt_separator:  <!--more-->
 ---
 
