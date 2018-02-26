@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Project Management of Software and the Like.
+category: business
 tags: management business
 excerpt_separator:  <!--more-->
 ---
