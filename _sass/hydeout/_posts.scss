@@ -5,7 +5,7 @@
 
 article + *, .post-body ~ section {
   padding-top: $section-spacing;
-  border-top: 1px solid $border-color;
+  border-top: 5px dashed #202020;
   margin-top: $section-spacing;
 
   > h2:first-child, > h3:first-child {
