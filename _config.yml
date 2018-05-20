@@ -31,6 +31,7 @@ remote_theme: "mmistakes/jekyll-theme-basically-basic"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-crosspost-to-medium
 
 search: true
 paginate: 3
@@ -45,6 +46,11 @@ collections:
   games:
     output: true
     permalink: /games/:path/
+
+jekyll-crosspost_to_medium:
+  enabled: true
+  cache: .jekyll-crosspost_to_medium
+  status: draft
 
 exclude:
    - Gemfile
