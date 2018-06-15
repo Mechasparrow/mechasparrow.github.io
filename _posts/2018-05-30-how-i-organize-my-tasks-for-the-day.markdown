@@ -14,7 +14,7 @@ So I started utilizing a system that I haven't used since Summer Break started a
 
 # The System
 
-I use this text editor on occasion called Emacs. Within Emacs they have special modes/plugins. One of the modes are called **org mode**. With in Org Mode you can do you can write notes/agendas/todos and so much more
+I use this text editor on occasion called Emacs. Within Emacs they have special modes/plugins. One of the modes are called [org mode](https://orgmode.org/). With in Org Mode you can do you can write notes/agendas/todos and so much more
 
 # How is this system used
 
