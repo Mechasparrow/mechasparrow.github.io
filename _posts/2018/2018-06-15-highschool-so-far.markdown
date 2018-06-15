@@ -1,7 +1,10 @@
 ---
 layout: post
-title: "Highschool So Far"
-date: "2018-06-15 13:01:51 -0500"
+title: Highschool So Far
+date: '2018-06-15 13:31'
+category: life
+crosspost_to_medium: true
+excerpt_separator:  <!--more-->
 ---
 
 So high school has been pretty interesting so far. I would like to say that I would like to get out of here and soon as possible. That feeling is greatly enhanced by that fact that I have one year left of high school. So in this article I’ll just go through the rundown of some key things that happened each year.
