@@ -4,6 +4,7 @@ title: "Summer Vacation 2018"
 date: "2018-07-25 10:44"
 tags: growth spiritual personal
 categories: life
+crosspost_to_medium: true
 excerpt_separator:  <!--more-->
 ---
 
