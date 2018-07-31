@@ -50,7 +50,7 @@ You can do this by running this command to change it in the terminal
 
 Add these lines to `/app/assets/javascripts/application.js` file.
 
-```JavaScript
+```javascript
 //= require jquery3
 //= require popper
 //= require bootstrap
@@ -112,7 +112,7 @@ In order to handle the connected tables we need to write the corresponding assoc
 
 Inside `/app/models/ordered_item.rb`
 
-```Ruby
+```ruby
 class OrderedItem < ApplicationRecord
   belongs_to :item
   belongs_to :cart
