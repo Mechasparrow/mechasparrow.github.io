@@ -7,8 +7,6 @@ crosspost_to_medium: true
 excerpt_separator:  <!--more-->
 ---
 
-# Building a Backend Web Application with Ruby on Rails (Part Two)
-
 If you haven't read part one. Go back and [read that](https://medium.com/@mechasparrow/web-backend-development-with-ruby-rails-part-one-ae4cf818e546)
 
 In this tutorial we will create additional models and seed them into the database.
