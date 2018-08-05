@@ -1,9 +1,8 @@
 ---
-layout: post
-date: 2018-05-22
+layout: project
 excerpt: "A competitive bracket generator and web app for single-elimination competitions"
 actions:
-  - label: "Download"
+  - label: "App"
     url: "http://competitive-bracket-gen.surge.sh/"
   - label: "Source"
     url: "https://github.com/Mechasparrow/game-bracket-gen"
