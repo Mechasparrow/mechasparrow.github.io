@@ -23,9 +23,9 @@ If you don't leave any slack in your life, how can you truly dedicate yourself t
 
 Don't be afraid to cut away these extraneous commitments. You can always come back to things when you feel like you can actually balance them.
 
-Commitments cant be balanced in the first place if you don't have the time to plan and organize in the first place.
+Commitments can't be balanced in the first place if you don't have the time to plan and organize in the first place.
 
-In that case, set aside at least a hour a week to look at all your commitments and plan things around accordingly. A schedule helps.
+In that case, set aside at least an hour a week to look at all your commitments and plan things around accordingly. A schedule helps.
 
 So that's that.
 
