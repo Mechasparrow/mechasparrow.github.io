@@ -13,6 +13,10 @@ Just last weekend, I attended a hackathon downtown called Code with a Cause. Her
 
 [Code with a Cause](https://globalhack.org/code-with-a-cause/) was a hackathon to help local nonprofits. Nonprofits would send project proposals which would be tackled by teams of participants. The goal at the end of the 3-day event was to have a solution available that alleviated the problems of the nonprofits. The event was noncompetitive and collaborative. If a team had trouble in one area/technology, members of other teams were encouraged to help out. On the last day, teams presented the projects they completed over the weekend.
 
+# What did I build
+
+The team I was on integrated a real-time messaging solution for one of the non-profits that were part of the event. This was integrated into their wordpress site.This would help their clients besides taking calls on the phone. The messaging solution we ended up utilizing was called [LiveChat](https://www.livechatinc.com/)
+
 # Why did I go?
 
 I went because I’ve always wanted to build things that could carry an impact and help benefit society as a whole. By building software for non-profits, they are able to focus on their mission rather than lose precious time in logistics and paperwork. This is just one way I’ve thought I could help provide an impact. I also wanted to gain more skills in presentation, leadership, and communication. I wanted to see what it took to build something that is to be used by clients or an organization.
