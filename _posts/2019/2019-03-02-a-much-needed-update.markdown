@@ -17,7 +17,7 @@ I might as well post an update as to the happenings.
 
 # Highschool + Spark
 
-I am currently finishing up my last year in High School. It has caused me to learn the bits and pieces of myself that I wouldn't have faced directly until much later down the road. Actual academics in school are pretty straightforward. Theres calculus, physics, english, and gym class.
+I am currently finishing up my last year in High School. It has caused me to learn the bits and pieces of myself that I wouldn't have faced directly until much later down the road. Actual academics in school are pretty straightforward. There's calculus, physics, english, and gym class.
 
 The rest of the school day is spark. Spark is the class I dedicate most of my time to. It is not to say that the other classes are not as important, but they require a craft to come to practical use. Spark is where I cultivate said craft.
 
@@ -45,7 +45,7 @@ It is about a spaceman who goes to space, but breaks his rocket. He needs to nav
 
 Each year in Spark, we are tasked with working on a team project. We are also given a collection of problems to work on at the beginning of the year. So I formed a team with a couple of classmates and this was the problem we chose.
 
-How does one lose less money from ink cartridges/3d printer filament? That is the key question. Secondary, is some printers, 3d printers espeicially are expensive. How can we help those people print what they need printed without having to travel long distances or purchase a printer they may use sparingly?
+How does one lose less money from ink cartridges/3d printer filament? That is the key question. Secondary, is some printers, 3d printers especially are expensive. How can we help those people print what they need printed without having to travel long distances or purchase a printer they may use sparingly?
 
 Prototype: Uber for Printing! Peer-to-peer printing service
 
