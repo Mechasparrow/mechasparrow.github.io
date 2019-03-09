@@ -5,9 +5,9 @@ date: "2019-03-08 18:31"
 excerpt_separator:  <!--more-->
 ---
 
-I just finished up the first demo version of Planeta. It is a space puzzle game where you are an trying to get back to his home planet.
+I just finished up the first demo version of Planeta. It is a space puzzle game where you are trying to get back to his home planet.
 
-You can download the demo here: [https://mechasparrow.itch.io/planeta](https://mechasparrow.itch.io/planeta)
+You can download the demo here: [https://mechasparrow.itch.io/planeta](https://mechasparrow.itch.io/planeta)  
 Feedback Survey: [https://goo.gl/forms/P9wNztzVuiZEi5vq2](https://goo.gl/forms/P9wNztzVuiZEi5vq2)
 
 # How the game came about
@@ -21,6 +21,7 @@ I also used to play Mario Galaxy when I was very young, so I decided I should ma
 # Some Screenshots
 
 ![Planeta screenshot](https://img.itch.zone/aW1hZ2UvMzgyMTEzLzE5MTY2NjQucG5n/347x500/mXfSq6.png)
+
 ![Planeta Screenshot](https://img.itch.zone/aW1hZ2UvMzgyMTEzLzE5MTY2NjUucG5n/347x500/0QHMb%2F.png)
 
 # Game Mechanics
