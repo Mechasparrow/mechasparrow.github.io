@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Mechasparrow
+author: Michael Navazhylau
 email: mechasparrow@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The official website of Mechasparrow. A mechanical bird that builds stuff
@@ -27,11 +28,14 @@ youtube_channel: https://www.youtube.com/channel/UChhfBPfgwfu69N4o-MWZK9A?view_a
 
 # Build settings
 markdown: kramdown
-remote_theme: "mmistakes/jekyll-theme-basically-basic"
+theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.16.3"
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-crosspost-to-medium
+  - jekyll-include-cache
+  - jekyll-font-awesome-sass
 
 search: true
 paginate: 3
@@ -42,19 +46,20 @@ disqus:
 
 google_analytics: UA-119139998-1
 
-collections:
-  games:
-    output: true
-    permalink: /games/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
-
 jekyll-crosspost_to_medium:
   enabled: true
   cache: .jekyll-crosspost_to_medium
   status: draft
 
+include: ["_pages"]
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
 exclude:
    - Gemfile
    - Gemfile.lock
