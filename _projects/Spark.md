@@ -2,9 +2,10 @@
 title: "Spark"
 excerpt: "Projects that I worked in the Spark Tech Solutions Program"
 header:
-  image: "/assets/images/spark.png"
   teaser: "/assets/images/spark.png"
 ---
+
+![Spark](/assets/images/spark.png){: .align-center}
 
 [Spark Website](http://parkwayspark.com/){: .btn .btn--danger}
 
