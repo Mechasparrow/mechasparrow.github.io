@@ -28,7 +28,7 @@ youtube_channel: https://www.youtube.com/channel/UChhfBPfgwfu69N4o-MWZK9A?view_a
 
 # Build settings
 markdown: kramdown
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.16.3"
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -37,8 +37,8 @@ plugins:
   - jekyll-font-awesome-sass
 
 search: true
-paginate: 3
-paginate_path: /page:num/
+paginate: 5
+paginate_path: /home/page:num/
 
 disqus:
   shortname: mechasparrow
