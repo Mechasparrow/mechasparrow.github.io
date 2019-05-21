@@ -29,7 +29,6 @@ youtube_channel: https://www.youtube.com/channel/UChhfBPfgwfu69N4o-MWZK9A?view_a
 # Build settings
 markdown: kramdown
 theme: minimal-mistakes-jekyll
-remote_theme: "mmistakes/minimal-mistakes@4.16.3"
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -68,3 +67,24 @@ exclude:
    - vendor/cache/
    - vendor/gems/
    - vendor/ruby/
+
+font-awesome:
+  assets: true
+
+footer:
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:mechasparrow@gmail.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/mechasparrow"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UChhfBPfgwfu69N4o-MWZK9A"
+    - label: "Twitch"
+      icon: "fab fa-fw fa-twitch"
+      url: "https://www.twitch.tv/mechasparrow"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
+      url: "https://medium.com/@mechasparrow"
