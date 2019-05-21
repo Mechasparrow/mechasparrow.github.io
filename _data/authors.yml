@@ -6,6 +6,9 @@ Michael Navazhylau:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:mechasparrow@gmail.com"
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
+      url: https://github.com/mechasparrow
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/mechasparrow"
