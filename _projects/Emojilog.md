@@ -5,7 +5,7 @@ header:
   teaser: "/assets/images/emojilog.jpg"
 ---
 
-![Spark](/assets/images/emojilog.jpg){: .align-center}
+![EmojiLog](/assets/images/emojilog.jpg){: .align-center}
 
 <!-- Buttons -->
 
