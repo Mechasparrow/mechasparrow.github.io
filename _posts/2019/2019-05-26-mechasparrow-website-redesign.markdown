@@ -37,3 +37,9 @@ It is also extensible enough so that information about my video/stream schedule 
 # Conclusion
 
 That basically sums up the website (re)design process. If you have any questions you can contact me via social platforms.
+
+---
+
+Michael Navazhylau (a.k.a Mechasparrow) is an engineer that loves building stuff, philosophy, and other creative endeavors. You can check out my website at Mechasparrow.
+
+[Twitter](https://twitter.com/mechasparrow) | [Instagram](https://www.instagram.com/mechasparrow/) | [YouTube](https://www.youtube.com/channel/UChhfBPfgwfu69N4o-MWZK9A) | [Website](https://mechasparrow.github.io/) | [GitHub](https://github.com/Mechasparrow)
