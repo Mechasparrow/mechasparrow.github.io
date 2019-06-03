@@ -64,6 +64,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path
+  games:
+    output: true
+    permalink: /:collection/:path
 
 include: ["_pages"]
 defaults:
@@ -89,6 +92,13 @@ defaults:
   - scope:
       path: ""
       type: projects
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  - scope:
+      path: ""
+      type: games
     values:
       layout: single
       author_profile: false
