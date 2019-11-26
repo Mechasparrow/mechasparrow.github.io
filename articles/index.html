@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<div class = "articles content container-fluid">
+  <h1 class = "blog-title">The Nest</h1>
+  <a href = "https://medium.com/@mechasparrow" target = "_blank">
+    <h2 class = "medium-link">
+      Medium
+    </h2>
+  </a>
+
+  <div class = "search-stuff">
+    <h2>Search Blog</h2>
+    <!-- HTML elements for search -->
+    <input class = "form-control" type="text" id="search-input" placeholder="Search blog posts..">
+    <div id="results-container"></div>
+
+
+    <!-- or without installing anything -->
+    <script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+
+    <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<div><a href="{url}?query={query}" title="{desc}">{title}</a></div>',
+        noResultsText: 'No results found',
+        limit: 5,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+  </div>
+
+  <div class = "articles-list">
+    {% for post in paginator.posts %}
+    <div class = "article-card">
+      <h1 class = "article-title">{{post.title}}</h1>
+      <h2 class = "article-date">{{ post.date | date_to_string }}</h2>
+
+      <p class = "d-none d-md-block article-excerpt">
+        {{ post.content | strip_html | truncatewords: 100 }}
+      </p>
+
+      <div class = "article-footer">
+        <div>
+          <h4 style = "float:left;" class = "category-link">
+            {% for category in post.categories %}
+              <span>{{category}}</span>
+            {% endfor %}
+          </h4>
+
+          <a href = "{{post.url}}">
+            <h4 style = "float:right;" class = "read-link">
+              Read
+            </h4>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+
+  <!-- Pagination links -->
+  <div class = "pagination page_number">
+    <h4 class="page_number ">
+      Page: {{ paginator.page }} of {{ paginator.total_pages }}
+    </h4>
+  </div>
+
+  <div class="pagination container-fluid">
+      {% if paginator.previous_page %}
+        <div class = "previous">
+          <a href="{{ paginator.previous_page_path }}"
+             class="previous btn btn-primary">
+            Previous
+          </a>
+        </div>
+      {% endif %}
+
+      {% if paginator.next_page %}
+        <div class = "next">
+          <a href="{{ paginator.next_page_path }}"
+             class="btn btn-primary">
+            Next
+          </a>
+        </div>
+      {% endif %}
+    </div>
+</div>

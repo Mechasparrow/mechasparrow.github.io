@@ -1,0 +1,54 @@
+I"�<h2 id="project-release-alkonost-another-news-aggregation-app">Project Release! Alkonost: Another News Aggregation App</h2>
+
+<p>Alright. Alright. What’s the project?</p>
+
+<p>TL;DR <a href="http://alkonost.surge.sh/">link to news app</a></p>
+
+<hr />
+
+<p>So recently, I’ve been kinda annoyed with news stuff. As a result, I’ve been working on a news aggregation app in my free time.</p>
+
+<p>It’s called <strong>Alkonost</strong>. You can use it <a href="http://alkonost.surge.sh/">here</a></p>
+
+<h3 id="what-does-it-do">What does it do?</h3>
+
+<p>Well right now. Not much.</p>
+
+<p>Currently I have it setup to read some news from a select set of newsfeeds and categories. The categories are as follows</p>
+
+<ul>
+  <li>Business</li>
+  <li>Tech</li>
+  <li>Entertainment</li>
+  <li>Art and Culture</li>
+  <li>Lifestyle</li>
+  <li>Politics</li>
+</ul>
+
+<p>I hope to implement more customizability in later versions.</p>
+
+<h3 id="features-to-implement">Features to Implement</h3>
+<p>Here is the current list of features that I plan to implement for next release.</p>
+
+<ul>
+  <li>Add custom rss feeds</li>
+  <li>Add custom categories</li>
+  <li>Delete rss feeds</li>
+</ul>
+
+<p>There is definitely a ton more I wish to implement, but I need to have a goal in my sights :P</p>
+
+<h3 id="important-bugs">Important Bugs</h3>
+
+<p>The current version of the app works. However, there are a couple of bugs. The main one is that</p>
+
+<blockquote>
+  <p>You can’t pull up the newsfeeds too quickly</p>
+</blockquote>
+
+<p>What this means is that by switching between different news categories too quickly it could cause the app to glitch out.</p>
+
+<hr />
+
+<p>That’s it for this post. If you enjoyed it please be sure to comment, like, share, and all that other fun stuff. Cheers.</p>
+:ET

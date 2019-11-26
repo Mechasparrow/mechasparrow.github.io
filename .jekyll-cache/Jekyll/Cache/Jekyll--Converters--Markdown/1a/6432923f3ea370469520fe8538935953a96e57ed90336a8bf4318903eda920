@@ -1,0 +1,220 @@
+I"�><p>If you haven’t read part one. Go back and <a href="https://medium.com/@mechasparrow/web-backend-development-with-ruby-rails-part-one-ae4cf818e546">read that</a></p>
+
+<p>In this tutorial we will create additional models and seed them into the database.</p>
+
+<p>After that we will write a simple view that will display a list of items the the grocery store has in stock.</p>
+
+<h2 id="lets-make-the-application-look-nicer">Lets make the application look nicer</h2>
+
+<p>Before we start adding more data models to our application, lets install bootstrap.</p>
+
+<p>inside the file named <code class="highlighter-rouge">Gemfile</code>, add these lines to it</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'bootstrap'</span><span class="p">,</span> <span class="s1">'~&gt; 4.1.3'</span>
+<span class="n">gem</span> <span class="s1">'jquery-rails'</span>
+</code></pre></div></div>
+
+<p>Then run</p>
+
+<p><code class="highlighter-rouge">bundle install</code></p>
+
+<p>This will install the bootstrap library for the project.</p>
+
+<p>Afterwards go into the <code class="highlighter-rouge">/app/assets/stylesheets/application.scss</code> file and add these line</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/*
+Adds bootstrap
+*/</span>
+
+<span class="k">@import</span> <span class="s1">"bootstrap"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>if the <code class="highlighter-rouge">application.scss</code> file ends in <code class="highlighter-rouge">.css</code>, just change it so it has the <code class="highlighter-rouge">.scss</code> ending.</p>
+
+<p>You can do this by running this command to change it in the terminal</p>
+
+<p><code class="highlighter-rouge">mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss</code></p>
+
+<p>Add these lines to <code class="highlighter-rouge">/app/assets/javascripts/application.js</code> file.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//= require jquery3</span>
+<span class="c1">//= require popper</span>
+<span class="c1">//= require bootstrap</span>
+</code></pre></div></div>
+
+<p>Now we have Bootstrap 4 added to our application!</p>
+
+<h2 id="adding-our-new-models">Adding our new models</h2>
+
+<p>We are going to add 2 new models, <code class="highlighter-rouge">Ordered_Items</code> and <code class="highlighter-rouge">Carts</code>. The ordered items model will be a table of items that have been ordered. The Cart will contain items that were ordered by the customer. So there will be some level of overlap that we will have to account for.</p>
+
+<p>These are called associations.</p>
+
+<p>First lets create the new models.</p>
+
+<p><code class="highlighter-rouge">rails generate model Cart</code>
+<code class="highlighter-rouge">rails generate model OrderedItem</code></p>
+
+<p>inside the folder <code class="highlighter-rouge">/db/migrate</code>, there will be a file ends with <code class="highlighter-rouge">create_ordered_items.rb</code>, open that file and edit it so it becomes this.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CreateOrderedItems</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="p">[</span><span class="mf">5.1</span><span class="p">]</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">create_table</span> <span class="ss">:ordered_items</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">integer</span> <span class="ss">:quantity</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">references</span> <span class="ss">:item</span><span class="p">,</span> <span class="ss">index: </span><span class="kp">true</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">references</span> <span class="ss">:cart</span><span class="p">,</span> <span class="ss">index: </span><span class="kp">true</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">timestamps</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">references</code> fields refers to the tables that the the table is connected to. In this case it is the <code class="highlighter-rouge">Item</code> and <code class="highlighter-rouge">Cart</code> model. I’ll show you how this connects when we seed example data for this.</p>
+
+<p>The last migration we need to create is in order to modify our previous <code class="highlighter-rouge">Item</code> table. To do this we run.</p>
+
+<p><code class="highlighter-rouge">rails generate migration AddStockToItems</code></p>
+
+<p>This will create a file in the <code class="highlighter-rouge">migrations</code> folder that ends with <code class="highlighter-rouge">add_stock_to_items.rb</code>. Edit the file so it contains this…</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">AddStockToItems</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="p">[</span><span class="mf">5.1</span><span class="p">]</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">add_column</span> <span class="ss">:items</span><span class="p">,</span> <span class="ss">:stock</span><span class="p">,</span> <span class="ss">:integer</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>With the <code class="highlighter-rouge">add_column</code> function, this migration adds a integer(number) column called <code class="highlighter-rouge">stock</code> to the <code class="highlighter-rouge">items</code> table.</p>
+
+<p>And finally.</p>
+
+<p><code class="highlighter-rouge">rails db:migrate</code></p>
+
+<h2 id="writing-the-model-associations">Writing the model associations</h2>
+
+<p>In order to handle the connected tables we need to write the corresponding associations.</p>
+
+<p>Inside <code class="highlighter-rouge">/app/models/ordered_item.rb</code></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">OrderedItem</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">belongs_to</span> <span class="ss">:item</span>
+  <span class="n">belongs_to</span> <span class="ss">:cart</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Inside <code class="highlighter-rouge">/app/models/item.rb</code></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Item</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">has_many</span> <span class="ss">:ordered_items</span><span class="p">,</span> <span class="ss">dependent: :destroy</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Inside <code class="highlighter-rouge">/app/models/cart.rb</code></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cart</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">has_many</span> <span class="ss">:ordered_items</span><span class="p">,</span> <span class="ss">dependent: :destroy</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>With the <code class="highlighter-rouge">belongs_to</code> and <code class="highlighter-rouge">has_many</code> association functions. We tell the framework that a Item has many Ordered Items connected to it. The Cart also has many ordered_items connected to it. And the Ordered Item belongs to both a Item and Cart.</p>
+
+<p>That way when a customer wants to take his or her cart to checkout, it already has all the corresponding ordered items. Those ordered items point to the items that are currently in stock.</p>
+
+<p>This may sound over complicated, but it will make managing the item inventory much more easier :)</p>
+
+<h2 id="seeding-the-data">Seeding the data</h2>
+
+<p>If we want to display the items we have in stock, we need some items!</p>
+
+<p>Go into <code class="highlighter-rouge">/db/seeds.rb</code>, and edit it so it is like this.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">items</span> <span class="o">=</span> <span class="no">Item</span><span class="p">.</span><span class="nf">create</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="ss">name: </span><span class="s1">'Apple'</span><span class="p">,</span>
+    <span class="ss">description: </span><span class="s1">'Basic Fruit'</span><span class="p">,</span>
+    <span class="ss">price: </span><span class="mf">0.25</span><span class="p">,</span>
+    <span class="ss">stock: </span><span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="ss">name: </span><span class="s1">'Watermellon'</span><span class="p">,</span>
+    <span class="ss">description: </span><span class="s1">'Fruit mainly composed of Water'</span><span class="p">,</span>
+    <span class="ss">price: </span><span class="mf">3.00</span><span class="p">,</span>
+    <span class="ss">stock: </span><span class="mi">1</span>
+  <span class="p">}</span>
+<span class="p">])</span>
+</code></pre></div></div>
+
+<p>run
+<code class="highlighter-rouge">rails db:seed</code></p>
+
+<p>to add the new data to the database.</p>
+
+<p>Now we have some initial items that we can display.</p>
+
+<h2 id="displaying-the-item-catalog">Displaying the item catalog</h2>
+
+<p>So now we want to display the items in the shop. Go back to the InventoryController (<code class="highlighter-rouge">/app/assets/controllers/inventory_controller.rb</code>) and edit the <code class="highlighter-rouge">index</code> function like so</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">...</span>
+<span class="k">def</span> <span class="nf">index</span>
+  <span class="vi">@items</span> <span class="o">=</span> <span class="no">Item</span><span class="p">.</span><span class="nf">all</span>
+<span class="k">end</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p>We created a variable called <code class="highlighter-rouge">@items</code> that we will be able to reference to within our view template. <code class="highlighter-rouge">Item.all</code> retrieves all the rows from the Item model.</p>
+
+<p>Let’s edit our view to be able to use this variable.
+Go into <code class="highlighter-rouge">/app/views/inventory/index.html.erb</code> and change it to this</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class = </span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class = </span><span class="s">"header-title"</span><span class="nt">&gt;</span> Here are all the items that are currently in stock...<span class="nt">&lt;/h1&gt;</span>
+
+  <span class="nt">&lt;</span><span class="err">%</span> <span class="na">if</span> <span class="err">(@</span><span class="na">items</span><span class="err">.</span><span class="na">length</span> <span class="err">&lt;=</span> <span class="na">0</span><span class="err">)</span> <span class="err">%</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Sorry no items :-( <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;</span><span class="err">%</span> <span class="err">@</span><span class="na">items</span><span class="err">.</span><span class="na">each</span> <span class="na">do</span> <span class="err">|</span><span class="na">item</span><span class="err">|</span> <span class="err">%</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class = </span><span class="s">"card card-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class = </span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h5</span> <span class="na">class = </span><span class="s">"card-title"</span><span class="nt">&gt;&lt;</span><span class="err">%=</span> <span class="na">item</span><span class="err">.</span><span class="na">name</span> <span class="err">%</span><span class="nt">&gt;&lt;/h5&gt;</span>
+        <span class="nt">&lt;h6</span> <span class="na">class = </span><span class="s">"card-subtitle mb-2 text-muted"</span><span class="nt">&gt;&lt;</span><span class="err">%=</span> <span class="na">item</span><span class="err">.</span><span class="na">stock</span> <span class="err">%</span><span class="nt">&gt;</span> in stock<span class="nt">&lt;/h6&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class = </span><span class="s">"card-text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">item</span><span class="err">.</span><span class="na">description</span> <span class="err">%</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class = </span><span class="s">"card-text card-item-cost"</span><span class="nt">&gt;</span>
+          $<span class="nt">&lt;</span><span class="err">%=</span> <span class="err">'%.</span><span class="na">2f</span><span class="err">'</span> <span class="err">%</span> <span class="na">item</span><span class="err">.</span><span class="na">price</span> <span class="err">%</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
+
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>also edit <code class="highlighter-rouge">/app/assets/stylesheets/inventory.scss</code> to contain this</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.header-title</span> <span class="p">{</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.card-item</span> <span class="p">{</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.card-item-cost</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now when you visit the <code class="highlighter-rouge">/</code> of the rails app. It should display something like this.</p>
+
+<p><img src="https://i.imgur.com/FnKzm5G.png" alt="" /></p>
+
+<p>Great Job! Now people can see what items can be purchased! In the next tutorial, we will start adding functionality that will allow the user to add items to his/her cart.</p>
+
+<p>You can get the source code for this project on <a href="https://github.com/Mechasparrow/inventory-manager-rails-tutorial">Github</a></p>
+
+<p>– Mechasparrow</p>
+:ET

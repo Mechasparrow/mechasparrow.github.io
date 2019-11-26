@@ -1,0 +1,20 @@
+I"�<p><img src="/assets/images/waifus.png" alt="" /></p>
+
+<h2 id="why">Why</h2>
+<p>So one day, I was watching Anime. I do this on a frequent basis. With that being the case, I realized at some point that there was so much anime that I was losing track of. I looked at the current implementation out there… mainly <a href="https://myanimelist.net">MyAnimeList</a>, but I thought I should build something a bit more extendable. There were a couple features and aesthetics that I wanted to modify. Not only that, I also have a set of favorate characters(A.K.A Waifus) that I thought would be cool to add in too. There is also a collection for this called <a href="https://mywaifulist.moe/">MyWaifuList</a></p>
+
+<h2 id="stack">Stack</h2>
+<p>The stack as of right now is just Angular 6.0 with TypeScript and Web Browser Storage. As I further develop the app. I’ll probably off load some of the logic onto a backend server of some sort.</p>
+
+<h2 id="features">Features</h2>
+<ul>
+  <li>Profile Page (WIP)</li>
+  <li>Anime Search</li>
+  <li>Waifu showcase</li>
+  <li>Anime/Entertainment collection Page</li>
+  <li><a href="https://github.com/Mechasparrow/Animku/issues">In Progress Features</a></li>
+</ul>
+
+<h2 id="exit">exit()</h2>
+<p>Well that’s all I have to say about Animku (WIP). If you’d like to learn more or take a look. You can check the source code out at <a href="https://github.com/Mechasparrow/Animku">Github</a></p>
+:ET

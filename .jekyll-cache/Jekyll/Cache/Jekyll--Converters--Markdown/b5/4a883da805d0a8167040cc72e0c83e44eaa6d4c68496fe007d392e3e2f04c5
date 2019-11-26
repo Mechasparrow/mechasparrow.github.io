@@ -1,0 +1,103 @@
+I"�<h2 id="what-is-an-web-backend">What is an web backend</h2>
+
+<p>A backend is the piece of software that deals with the business logic for interacting with the application’s data. This could be tweets, account records, facebook posts, and any other sort of data that you could think of that a user would want to interact with.</p>
+
+<p>In a later tutorial we will go over frontend development to help shape what the user sees.</p>
+
+<h2 id="what-are-we-going-to-build">What are we going to build?</h2>
+
+<p>We are going to build a simple store inventory system. That way a grocery manager/clerk can keep track of what items are in stock. This tutorial will be separated into different parts. In this one we are going to just set up rails and generate some basic code to start.</p>
+
+<h2 id="installing-rails">Installing Rails</h2>
+
+<p>Make sure that you have <a href="https://www.ruby-lang.org/en/">Ruby</a> installed. Once you do we are going to run this command in the terminal</p>
+
+<p><code class="highlighter-rouge">gem install rails</code></p>
+
+<p>This installs the latest version of rails that we will be used for developing our store inventory software.</p>
+
+<p>Alright it is time to create our application.</p>
+
+<p><code class="highlighter-rouge">rails new inventory-system</code><br />
+<code class="highlighter-rouge">cd inventory-system</code><br />
+<code class="highlighter-rouge">bundle install</code></p>
+
+<p>This creates our new application in a folder called <code class="highlighter-rouge">inventory-system</code> and then we move into that folder and install our libs with the <code class="highlighter-rouge">bundle install</code> command.</p>
+
+<p>From this point on, when I refer to <code class="highlighter-rouge">/</code>, I mean the path to the <code class="highlighter-rouge">inventory-system</code> project folder.</p>
+
+<h2 id="launching-the-application">Launching the application</h2>
+
+<p>You can launch the application with</p>
+
+<p><code class="highlighter-rouge">rails s</code></p>
+
+<p>Then navigate your web browser to <code class="highlighter-rouge">localhost:3000</code></p>
+
+<p>You should see something like this..</p>
+
+<p><img src="http://guides.rubyonrails.org/v5.0/images/getting_started/rails_welcome.png" alt="Your on rails" /></p>
+
+<h2 id="generating-helper-code">Generating helper code</h2>
+
+<p>We are going to generate some code just to save some time.</p>
+
+<h3 id="generating-the-data-model">Generating the data model</h3>
+
+<p>A model is software layer that simplifies the process of saving and reading data from our database.</p>
+
+<p>So for our <code class="highlighter-rouge">items</code> model. run</p>
+
+<p><code class="highlighter-rouge">rails generate model item name:string description:text price:decimal</code><br />
+<code class="highlighter-rouge">rails db:migrate</code></p>
+
+<p>This generates a model that has a name, description, and a price field. This will be important later on when we are saving or viewing item data.
+We then run a migration with the second command so the database is changed in response to our model code we generated.</p>
+
+<h3 id="generating-the-controller">Generating the controller</h3>
+
+<p>The controller is the code that is the real meat of the application. This is where all the business logic goes.</p>
+
+<p>To generate our controller run</p>
+
+<p><code class="highlighter-rouge">rails generate Inventory</code></p>
+
+<p>This generates a controller (ruby file) that will deal with all the business logic for managing our inventory. Our inventory will just be a collection of <code class="highlighter-rouge">Item</code> data.</p>
+
+<p>This will generate a file called <code class="highlighter-rouge">inventory_controller.rb</code></p>
+
+<p>in the file you’ll see</p>
+
+<p>create a function called <code class="highlighter-rouge">index</code></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">index</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>and then go into <code class="highlighter-rouge">/config/routes.rb</code></p>
+
+<p>and add the code as seen from the <code class="highlighter-rouge">new code</code> comment</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+  <span class="c1"># New code</span>
+  <span class="n">root</span> <span class="s1">'inventory#index'</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>then create the file starting from root <code class="highlighter-rouge">/app/views/inventory/index.html.erb</code></p>
+
+<p>inside it write</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Hello there<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
+
+<p>Now if we visit <code class="highlighter-rouge">localhost:3000</code>, we should see this simple web page with the text, <strong>Hello There</strong></p>
+
+<p>That’s it for this tutorial. In the next one we are going to actually load some items into the database and render them to the client.</p>
+
+<p>There will also be a separate tutorial on install bootstrap for this project.</p>
+
+<p>You can get the source code for this project on <a href="https://github.com/Mechasparrow/inventory-manager-rails-tutorial">Github</a></p>
+:ET

@@ -1,0 +1,48 @@
+I"�	<p>Hello all. I just finished redesigning my website and thought that I should talk about it a bit.</p>
+
+<h1 id="why-did-i-redesign-it">Why did I redesign it?</h1>
+
+<p>The main reason for redesigning the website was that it hasn’t been updated for over a year.</p>
+
+<p>The secondary reason is that I thought that the old website was hard to navigate and clunky.</p>
+
+<p>I also thought that redesigning my website and its contents would be a great project to kick off my summer break this year.</p>
+
+<h1 id="what-was-done">What was done?</h1>
+
+<p>My website currently runs on top of <a href="https://jekyllrb.com/">Jekyll</a>. It is a tool for streamlining the blog/portfolio creation process.</p>
+
+<p>This allows me to worry less about writing the redundant HTML code for the website and more time writing content for the website.</p>
+
+<p>The best part about Jekyll is that there is already an assortment of free open-source themes to choose from.</p>
+
+<p>This saves me an additional time by eliminating the necessity to create a design for the website from scratch. Instead, I get to choose a design that has been battle tested so to speak.</p>
+
+<p>For new content on the website, I added a new projects page with a list of some projects I’ve worked on. I then wrote an improved about section and updated the social links as well.</p>
+
+<h1 id="how-does-this-improvechange-things">How does this improve/change things?</h1>
+
+<p>Now that I have a better website in place, I can focus more on content creation and projects without worrying about having a good central hub to showcase it from.</p>
+
+<p>It is also extensible enough so that information about my video/stream schedule and tutorials can be added in the future.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>That basically sums up the website (re)design process. If you have any questions you can contact me via social platforms.</p>
+
+<hr />
+
+<p>Michael Navazhylau (a.k.a Mechasparrow) is an engineer that loves building stuff, philosophy, and other creative endeavors. You can check out my website at Mechasparrow.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://twitter.com/mechasparrow">Twitter</a></td>
+      <td><a href="https://www.instagram.com/mechasparrow/">Instagram</a></td>
+      <td><a href="https://www.youtube.com/channel/UChhfBPfgwfu69N4o-MWZK9A">YouTube</a></td>
+      <td><a href="https://mechasparrow.github.io/">Website</a></td>
+      <td><a href="https://github.com/Mechasparrow">GitHub</a></td>
+    </tr>
+  </tbody>
+</table>
+:ET

@@ -1,0 +1,90 @@
+I"�<h1 id="building-and-testing-a-prototype-on-the-cheap">Building and testing a prototype on the cheap.</h1>
+
+<p>Some of us might have an idea or product that may want to design and further develop. Well, before you go and start spending your precious time coding the thing out, it may very well in your interest to get market validation and design a simple functional wireframe/product design.</p>
+
+<p>Some well-known tools that can be used are Sketch, Photoshop, and Adobe XD. Another prototyping tool similar to Adobe XD is InVision.</p>
+
+<p>The tools I mainly use for prototyping are InkScape and InVision. InkScape is a FOSS Vector graphics tools and it is pretty powerful once you get past its learning curve. I also find InVision pretty intuitive to use when mocking up a very simple prototype.</p>
+
+<p>Let’s go through an example workflow process for prototyping that I’ve used in the previous products I’ve designed and built.</p>
+
+<h1 id="find-a-problem">Find a Problem</h1>
+
+<p>For any product or construction to be of any use, it must solve/address some sort of problem. The scope and impact of the problem can be up to you. At this stage, your just looking for your base starting point.</p>
+
+<p>For example, I can have the problem of “What is best the beverages to drink?”</p>
+
+<p>The weird and wacky problem, but it does not initially have to be a realistic problem to solve.</p>
+
+<h1 id="shrink-and-change-the-scope">Shrink and Change the scope</h1>
+
+<p>Depending on the size of the problem, you may want to find an analogous problem or shrink the scope of the problem down. For example, instead of trying to find the best beverages to drink. I can see what are the best-rated beverages in my area.</p>
+
+<p>This way, the size of the problem has shrinked to something more manageable.</p>
+
+<p>Furthermore, one can shift the problem to “Which restaurants have the best drinks”.</p>
+
+<p>Again, the scope has modified to a specific and easier subset of the initial problem.</p>
+
+<h1 id="list-out-the-features">List out the features</h1>
+
+<p>Before you can create product design, you need to outline what a basic version of your product will be able to do.</p>
+
+<p>For example.</p>
+
+<p><strong>Drink Beverage app:</strong></p>
+
+<ol>
+  <li>Find beverages in your area</li>
+  <li>View information about the drink</li>
+  <li>Leave a review for a drink</li>
+  <li>Post/Publish newly discovered drinks</li>
+</ol>
+
+<p>To start, I would recommend coming up with 3-5 solid features that your product will have, but this differs depending on the scope of the problem. </p>
+
+<h1 id="start-designing-low-fi-solutions">Start Designing Low-Fi solutions</h1>
+
+<p>Try designing potential solutions to the problem. These can be in the form of</p>
+
+<ol>
+  <li>Paper Prototypes</li>
+  <li>Wireframes/Mockups</li>
+  <li>3d models</li>
+  <li>Any other low-effort, low-cost design method</li>
+</ol>
+
+<h1 id="design-feedback">Design Feedback</h1>
+
+<p>Once you got a couple of different versions. You want to grab some user feedback.  This can be down through by asking potential users what designs they think are the best and seeing which ones they find the most intuitive to use.</p>
+
+<h1 id="doubling-down-on-design">Doubling down on design.</h1>
+
+<p>Once you created a decent low fidelity prototype, it’s time to actually design the prototype. I personally use Inkscape, but you can use any art/design tool that you want for this step.</p>
+
+<h1 id="connecting-all-the-dots-screens">Connecting all the Dots (Screens)</h1>
+
+<p>For digital products, one can use tools like InVision or Adobe XD to turn their design into a functional prototype.</p>
+
+<p>If it is supposed to be a physical prototype, it can be either 3d printed or modeled cardboard or styrofoam.</p>
+
+<hr />
+
+<p>This basically sums up the product prototyping stage. Maybe I’ll go into more facets of product design/development in further articles.</p>
+
+<hr />
+
+<p>Michael Navazhylau (a.k.a Mechasparrow) is an engineer that loves building stuff, philosophy, and other creative endeavors. You can check out my website at Mechasparrow.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://twitter.com/mechasparrow">Twitter</a></td>
+      <td><a href="https://www.instagram.com/mechasparrow/">Instagram</a></td>
+      <td><a href="https://www.youtube.com/channel/UChhfBPfgwfu69N4o-MWZK9A">YouTube</a></td>
+      <td><a href="https://mechasparrow.github.io/">Website</a></td>
+      <td><a href="https://github.com/Mechasparrow">GitHub</a></td>
+    </tr>
+  </tbody>
+</table>
+:ET
