@@ -44,7 +44,8 @@ layout: default
       <h1 class = "title">Projects</h1>
 
       <div class = "row project-cards">
-        {% for project in site.projects %}
+        {% for i in (0..2) %}
+          {% assign project = site.projects[i] %}
           <div class = "project-card-wrapper col-md-4">
             <div class = "project-card h-100">
 
