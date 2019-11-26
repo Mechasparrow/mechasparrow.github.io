@@ -3,6 +3,7 @@ layout: project
 output: true
 title: "Spark"
 image: "/assets/images/spark.png"
+category: featured
 excerpt: "Projects that I worked in the Spark Tech Solutions Program"
 ---
 

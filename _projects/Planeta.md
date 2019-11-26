@@ -3,6 +3,7 @@ layout: project
 title: "Planeta"
 excerpt: "A 2D Space Puzzle Game"
 image: "/assets/images/planeta.png"
+category: featured
 view_url: https://mechasparrow.itch.io/planeta
 ---
 

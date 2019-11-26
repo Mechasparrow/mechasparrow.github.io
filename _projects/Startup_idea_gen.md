@@ -3,6 +3,7 @@ layout: project
 title: "Startup Idea Generator"
 excerpt: "A tool for generating startup ideas."
 image: "/assets/images/startup_idea_gen.jpg"
+category: featured
 code_url: https://github.com/Mechasparrow/startup-idea-gen
 view_url: http://startup-gen.surge.sh/
 ---
