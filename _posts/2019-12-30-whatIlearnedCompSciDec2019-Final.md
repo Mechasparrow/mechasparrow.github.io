@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What I Learned Studying Computer Science during my First Semester of College"
-date: "2019-12-26"
+date: "2019-12-30"
 ---
 ![Coding Photo](/assets/images/compsci-first-sem-cover.jpg)
 
