@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "What I Learned Studying Computer Science during my First Semester of College"
 date: "2019-12-30"
 ---
