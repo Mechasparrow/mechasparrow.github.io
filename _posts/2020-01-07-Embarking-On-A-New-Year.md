@@ -5,7 +5,7 @@ title: "Embarking on a New Year: 2020"
 date: "2020-01-07"
 ---
 
-![SpaceX Rocket](/assets/images/spacex-embark.jpg))
+![SpaceX Rocket](/assets/images/spacex-embark.jpg)
 
 Hello again. A new year has come upon us.
 
