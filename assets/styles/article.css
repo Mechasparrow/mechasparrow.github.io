@@ -5,14 +5,31 @@
   padding-bottom: 32px;
 }
 
-.article .writing img {
+.article .writing img{
   width: 100%;
-  margin: auto;
+  max-width: 400px !important;
+  display:block !important;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/** TODO test this **/
+
+.article .writing p:first-child img{
+  width: 100%;
+  max-width: 100% !important;
+}
+
+
 
 .article .writing {
   margin-top: 32px;
   font-size: 1.5em;
+  font-family: helvetica !important;
+}
+
+.article .writing h1, .article .writing h2, .article .writing h3, .article .writing h4,.article .writing h5,.article .writing h6 {
+  margin-top: 2em;
 }
 
 .extra-info {
