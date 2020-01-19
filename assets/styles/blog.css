@@ -20,7 +20,7 @@
 
 .article-card {
   width: 100%;
-  border: 5px solid #33CCFF;
+  border: 5px solid black;
   overflow: auto;
   padding: 16px;
   margin-bottom: 32px;
@@ -43,7 +43,7 @@
 }
 
 .read-link {
-  color: #33CCFF;
+  color: #6666CC;
   cursor: pointer;
   text-decoration: underline;
 }

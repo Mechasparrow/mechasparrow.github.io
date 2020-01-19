@@ -37,7 +37,11 @@ layout: default
   <div class = "articles-list">
     {% for post in paginator.posts %}
     <div class = "article-card">
-      <h1 class = "article-title">{{post.title}}</h1>
+
+      <a href = "{{post.url}}">
+        <h2 class = "read-link" class = "article-title">{{post.title}}</h2>
+      </a>
+
       <h2 class = "article-date">{{ post.date | date_to_string }}</h2>
 
       <p class = "d-none d-md-block article-excerpt">
@@ -51,12 +55,6 @@ layout: default
               <span>{{category}}</span>
             {% endfor %}
           </h4>
-
-          <a href = "{{post.url}}">
-            <h4 style = "float:right;" class = "read-link">
-              Read
-            </h4>
-          </a>
         </div>
       </div>
     </div>
