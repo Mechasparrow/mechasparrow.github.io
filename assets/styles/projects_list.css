@@ -1,5 +1,5 @@
 /** Styling for projects list **/
-.projects-list .title {
+.projects-list .title, .in-progress .title {
   padding-top: 16px;
   padding-left: 8px;
   margin-bottom: 16px;
@@ -11,4 +11,13 @@
 }
 .img-top {
   object-fit: cover;
+}
+
+.in-progress {
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+.in-progress-list ul {
+  font-size: 1.5em;
 }
