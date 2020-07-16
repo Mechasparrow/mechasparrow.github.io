@@ -2,8 +2,8 @@
 author_profile: true
 author: Michael Navazhylau
 permalink: /projects/
+title: Projects
 ---
 
-# Projects
 
 This page is under construction

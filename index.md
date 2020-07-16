@@ -2,6 +2,7 @@
 layout: home
 author_profile: true
 author: Michael Navazhylau
+title: Home
 ---
 
 ## What am I working on?

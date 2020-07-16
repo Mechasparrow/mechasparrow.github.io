@@ -2,9 +2,9 @@
 author_profile: true
 author: Michael Navazhylau
 permalink: /about/
+title: About
 ---
 
-# About
 
 Hello. Welcome to my website. 
 
