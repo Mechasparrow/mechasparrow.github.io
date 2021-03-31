@@ -7,5 +7,7 @@ main:
     url: /blog/
   - title: "Projects"
     url: /projects/
+  - title: "College Courses"
+    url: /courses/
   - title: "Resume"
     url: /assets/resources/resume.pdf
